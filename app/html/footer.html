@@ -1,0 +1,328 @@
+
+
+
+<div class="content--horizontal">
+  <div class="content--vertical">
+    <div class="contact--us">
+      <div class="contact--us-save">Save a copy</div>
+      <div class="contact--us-title">Contact us</div>
+      <form class="contact--us-form">
+        <input class="contact--us-input" type="text" placeholder="Name">
+        <input class="contact--us-input" type="text" placeholder="Subject">
+        <textarea class="contact--us-textarea" placeholder="Message"></textarea>
+      </form>
+      <button class="contact--us-btn">
+        SEND
+      </button>
+    </div>
+    <div class="friends">
+      <label class="signIn--label">
+        <input type="text" class="signIn--input" placeholder="Search">
+        <img src="img/username.svg" alt="user">
+      </label>
+      <div class="friend--block">
+        <div class="friend--online"></div>
+        <div class="friend--content">
+          <img src="img/harry.png" alt="harry">
+          <div class="friend--text">
+            <div class="friend--name">
+              Harry Roberts
+            </div>
+            <div class="friend--time">
+              1 hour ago
+            </div>
+          </div>
+        </div>
+        <img src="img/add-frinend.svg" alt="add">
+      </div>
+      <div class="friend--block">
+        <div class="friend--content">
+          <img src="img/manik.png" alt="manik">
+          <div class="friend--text">
+            <div class="friend--name">
+              Manik Rathee
+            </div>
+            <div class="friend--time">
+              5 min ago
+            </div>
+          </div>
+        </div>
+        <img src="img/add-frinend.svg" alt="add">
+      </div>
+      <div class="friend--block">
+        <div class="friend--content">
+          <img src="img/brad.png" alt="brad">
+          <div class="friend--text">
+            <div class="friend--name">
+              Brad Frost
+            </div>
+            <div class="friend--time">
+              12 min ago
+            </div>
+          </div>
+        </div>
+        <img src="img/friend-active.svg" alt="add">
+      </div>
+      <div class="friend--block">
+        <div class="friend--content">
+          <img src="img/claudio.png" alt="claudio">
+          <div class="friend--text">
+            <div class="friend--name">
+              Claudio Guglineri
+            </div>
+            <div class="friend--time">
+              1 hour ago
+            </div>
+          </div>
+        </div>
+        <img src="img/add-frinend.svg" alt="add">
+      </div>
+    </div>
+    <div class="player">
+      <div class="player--top">
+        <img src="img/player.jpg" class="player-bg" alt="player">
+        <div class="player--top-header">
+          <img src="img/player-sound.svg" alt="sound">
+          <img src="img/player-settings.svg" alt="settings">
+        </div>
+        <div class="player--top-content">
+          <div class="player--top-buttons">
+            <img src="img/back.svg" alt="btn">
+            <img src="img/play.svg" alt="btn">
+            <img src="img/forward.svg" alt="btn">
+          </div>
+          <div class="player--top-control">
+            <div class="control--block">
+              2:18
+            </div>
+            <div class="player--line-bg">
+              <div class="player--line"></div>
+            </div>
+            <div class="control--block">
+              <img src="img/mix.svg" alt="mix">
+              <img src="img/loop.svg" alt="loop">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="player--bottom">
+        <div class="player--title">
+          In Dark, In Day
+        </div>
+        <div class="player--bottom-footer">
+          <div class="player--bottom-subtitle">
+            Maya Jane Coles
+          </div>
+          <div class="player--images">
+            <img src="img/player-like.svg" alt="like">
+            <img src="img/playe-share.svg" alt="share">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content--vertical">
+    <div class="article">
+      <div class="article--left">
+        <img class="article--img" src="img/article.jpg" alt="article">
+        <div class="article--left-bottom">
+          <div class="article--admin">
+            <img src="img/admin.svg" alt="admin">
+            <div>Admin</div>
+          </div>
+          <div class="article--time">08:15 AM</div>
+        </div>
+      </div>
+      <div class="article--right">
+        <div class="article--right-header">
+          <div>Bacon Ipsum !</div>
+          <div class="article--right-header-images">
+            <img src="img/article-share.svg" alt="save">
+            <img src="img/article-save.svg" alt="save">
+          </div>
+        </div>
+        <p class="article--text">
+          Bacon ipsum dolor amet shankle tri-tip salami doner chicken rump.
+          Cow meatloaf boudin, jowl beef corned beef
+          turducken sirloin biltong
+          Meatloaf bacon t-bone ground round doner
+          leberkas drumstick tongue pork belly jowl chuck ball tip turkey hamburger strip steak.
+        </p>
+        <div class="article--footer">
+          <div class="article--read">READ MORE</div>
+          <img src="img/article-dots.svg" alt="dots">
+        </div>
+      </div>
+    </div>
+    <div class="content--horizontal">
+      <div class="content--vertical">
+        <div class="calendar">
+          <div class="button-container-calendar">
+            <button id="previous" onclick="previous()">
+              <img src="img/calendar-prew.svg" alt="prew">
+            </button>
+            <h3 id="monthAndYear"></h3>
+            <button id="next" onclick="next()">
+              <img src="img/calendar-next.svg" alt="next">
+            </button>
+          </div>
+
+          <table class="table-calendar" id="calendar" data-lang="en">
+            <thead id="thead-month"></thead>
+            <tbody id="calendar-body"></tbody>
+          </table>
+
+          <div class="footer-container-calendar">
+            <label for="month">Jump To: </label>
+            <select id="month" onchange="jump()">
+              <option value=0>Jan</option>
+              <option value=1>Feb</option>
+              <option value=2>Mar</option>
+              <option value=3>Apr</option>
+              <option value=4>May</option>
+              <option value=5>Jun</option>
+              <option value=6>Jul</option>
+              <option value=7>Aug</option>
+              <option value=8>Sep</option>
+              <option value=9>Oct</option>
+              <option value=10>Nov</option>
+              <option value=11>Dec</option>
+            </select>
+            <select id="year" onchange="jump()"></select>
+          </div>
+        </div>
+        <div class="clock">
+          <div class="clock--left">
+            <img src="img/clock.png" alt="clock">
+          </div>
+          <div class="clock--right">
+            <div class="clock--time">
+              11:45
+            </div>
+            <div class="clock--date">
+              December, 14, 2014
+            </div>
+          </div>
+        </div>
+        <div class="mercurial">
+          <img class="mercurial--plus" src="img/mercurial-plus.svg" alt="plus">
+          <div class="mercurial--top">
+            <img src="img/nike-merc.jpg" alt="nile">
+          </div>
+          <div class="mercurial--bottom">
+            <div class="mercurial--bottom-block">
+              <div class="mercurial--dark">
+                Nike
+              </div>
+              <div class="mercurial--dark">
+                135$
+              </div>
+            </div>
+            <div class="mercurial--bottom-block">
+              <div class="mercurial--light">
+                Mercurial
+              </div>
+              <img src="img/mercurial-stars.svg" alt="stars">
+            </div>
+          </div>
+        </div>
+        <div class="buy">
+          <div class="buy--top">
+            <img src="img/merc-small.jpg" alt="nike">
+            <div class="buy--price">
+              <div class="old--price">
+                165$
+              </div>
+              <div class="new--price">
+                135$
+              </div>
+            </div>
+          </div>
+          <div class="buy--top">
+            <button class="contact--us-btn checkout--btn">
+              Checkout
+            </button>
+            <div class="shipping">
+              <div class="shipping--block">
+                <img src="img/ship-active.svg" alt="ship">
+                <div>Standart Shipping</div>
+              </div>
+              <div class="shipping--block">
+                <img src="img/ship.svg" alt="ship">
+                <div>Express Shipping</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content--vertical">
+        <div class="studio">
+          <img src="img/map.jpg" alt="map">
+          <div class="map--block">
+            <div class="map--block-content">
+              <div class="map--block-title">
+                Fabric Studio
+              </div>
+              <div class="map--block-address">
+                Knowhwere Avenue <br>
+                Marvel Street 024 <br/>
+                Sun Galaxy <br/>
+              </div>
+            </div>
+            <img src="img/map-location.svg" alt="map">
+          </div>
+        </div>
+        <div class="messenger">
+          <div class="messenger--header">
+            <div class="messenger--header-user">
+              Ennio5
+            </div>
+            <div class="messenger--header-online"></div>
+          </div>
+          <div class="messenger--main">
+            <div class="messenger--block-top">
+              <div class="messenger--grey-block">
+                Yo mate! <br>
+                Check out this <br>
+                Ui kit ! <br>
+                <img class="grey-polygon" src="img/block-grey-polygon.svg" alt="grey">
+              </div>
+              <div class="messenger--time">
+                5 min ago
+              </div>
+            </div>
+            <div class="messenger--block-bottom">
+              Thanks Mate!
+              <img class="orange-polygon" src="img/block-orange-polygon.svg" alt="block">
+            </div>
+          </div>
+          <div class="messenger--footer">
+            <input placeholder="Write a message" class="messenger--input" type="text">
+            <img src="img/messenger-pin.svg" alt="pin">
+            <img src="img/messenger-send.svg" alt="send">
+          </div>
+        </div>
+        <div class="download">
+          <div class="download--top">
+            <img src="img/download-desktop.svg" alt="desktop">
+            <img src="img/download-laptop.svg" alt="laptop">
+            <img src="img/download-photo.svg" alt="phone">
+          </div>
+          <div class="download--bottom">
+            <div class="download--bottom-btn">
+              Download the kit now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src = "js/scripts.min.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<script src = "img"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</body>
+</html>
