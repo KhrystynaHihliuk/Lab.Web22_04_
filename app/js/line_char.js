@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.getJSON("data.json", function (data){
+    $.getJSON("json/data.json", function (data){
         let data_v = '';
         $.each(data, function (key, value){
             data_v += '<div class="line-chart-block ">';
