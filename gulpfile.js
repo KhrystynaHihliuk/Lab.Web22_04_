@@ -20,6 +20,7 @@ const path = {
         css: `${buildFolder}/css/`,
         js: `${buildFolder}/js/`,
         img: `${buildFolder}/img/`,
+        json:`${buildFolder}/json/`,
     },
     /*src: {
         html: `${srcFolder}/!*.html`,
@@ -32,6 +33,7 @@ const path = {
         css: `${srcFolder}/css/*.css`,
         js: `${srcFolder}/js/*.js`,
         img: `${srcFolder}/img/*`,
+        json: `${srcFolder}/*.json`,
     },
     watch: {
         files: `${srcFolder}/!*`,
@@ -61,12 +63,15 @@ const html = () => {
 
 const css = () => {
     return app.gulp.src(app.path.src.css)
-        .pipe(concat('styles.css'))
+        .pipe(concat('styles.scss'))
         .pipe (cleanCSS())
         .pipe (rename ({suffix: '.min'}))
         .pipe(app.gulp.dest(app.path.build.css))
 }
-
+const json = () => {
+    return app.gulp.src(app.path.src.json)
+        .pipe(app.gulp.dest(app.path.build.json))
+}
 // cтискання зображень
 const images = () => {
     return app.gulp.src(app.path.src.img)
@@ -85,6 +90,8 @@ const scripts = () => {
         .pipe (uglify ())
         .pipe (rename ({suffix: '.min'}))
         .pipe(app.gulp.dest(app.path.build.js))
+    return app.gulp.src(app.path.src.json)
+        .pipe(app.gulp.dest(app.path.build.json))
 }
 
 //відстежування за змінами у файлах
@@ -93,6 +100,7 @@ const watcher = (done) => {
     gulp.watch(app.path.watch.files, scripts);
     gulp.watch(app.path.watch.files, images);
     gulp.watch(app.path.watch.files, css);
+    gulp.watch(app.path.watch.files, json);
     done();
 }
 const server = (done) => {
@@ -105,7 +113,7 @@ const server = (done) => {
     });
     done();
 }
-const mainTask = gulp.series( html, css, scripts, images);
+const mainTask = gulp.series( html, css, scripts, images,json);
 
 const dev = gulp.series(mainTask, gulp.parallel(watcher, server));
 
